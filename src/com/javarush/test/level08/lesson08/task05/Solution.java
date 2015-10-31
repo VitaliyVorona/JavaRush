@@ -13,14 +13,30 @@ public class Solution
     public static HashMap<String, String> createMap()
     {
         //напишите тут ваш код
-        return null;
+        HashMap hashMap = new HashMap<String, String>();
+        hashMap.put("Ivanov", "Stepan");
+        hashMap.put("Panov", "Valeriy");
+        hashMap.put("Ianov", "Stepa");
+        hashMap.put("Ivvanov", "Steppan");
+        hashMap.put("Ioganov", "Stepan");
+        hashMap.put("Iffanov", "Stefan");
+        hashMap.put("Iov", "Stefan");
+        hashMap.put("Iv", "Steban");
+        hashMap.put("Iannov", "Stphepan");
+        hashMap.put("Ibanov", "Stepan");
+        return hashMap;
 
     }
 
     public static void removeTheFirstNameDuplicates(HashMap<String, String> map)
     {
         //напишите тут ваш код
+        HashMap<String, String> initMap = new HashMap<String, String>(map);
+        HashMap<String, String> processedMap = new HashMap<String, String>();
+        for (Map.Entry<String, String> pair: initMap.entrySet()){
+            removeItemFromMapByValue(map, pair.getValue());
 
+        };
     }
 
     public static void removeItemFromMapByValue(HashMap<String, String> map, String value)
