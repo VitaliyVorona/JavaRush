@@ -2,7 +2,6 @@ package com.javarush.test.level20.lesson02.task02;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /* Читаем и пишем в файл: JavaRush
@@ -51,7 +50,15 @@ public class Solution {
 
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
-            PrintWriter writer
+            PrintWriter writer = new PrintWriter(outputStream);
+            int usersCounter = 0;
+
+            String isUserPresent = users != null ? "yes" : "no";
+            writer.println(isUserPresent);
+
+            int usersNumber = users.size();
+            for (int i=0; i)
+            writer.println();
         }
 
         public void load(InputStream inputStream) throws Exception {
